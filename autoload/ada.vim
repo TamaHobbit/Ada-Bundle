@@ -566,10 +566,6 @@ function ada#Map_Menu (Text, Keys, Command)
 	\ "nnoremap <buffer> "	 .
 	\ a:Keys		 .
 	\" :" . a:Command . "<CR>"
-      execute
-	\ "inoremap <buffer> "	 .
-	\ a:Keys		 .
-	\" <C-O>:" . a:Command . "<CR>"
    else
       if exists("g:mapleader")
          let l:leader = g:mapleader
@@ -585,10 +581,6 @@ function ada#Map_Menu (Text, Keys, Command)
 	\ "nnoremap <buffer>" .
 	\ escape(l:leader . "a" . a:Keys , '\') .
 	\" :" . a:Command
-      execute
-	\ "inoremap <buffer>" .
-	\ escape(l:leader . "a" . a:Keys , '\') .
-	\" <C-O>:" . a:Command
    endif
    return
 endfunction
